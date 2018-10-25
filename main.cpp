@@ -1,6 +1,7 @@
-//Author:
+//Author: Sam Loose
 #include <iostream>
-
+#include <string>
+#include <vector>
 using namespace std;
 
 //GLOBAL CONSTANTS
@@ -43,7 +44,18 @@ int main()
     //TODO: Place the piece and swap turns
     //Outline
     //1. When neither of the (above) if nor else if statements are true, then...
+    else
+    {
     //1-A.  Assign the board location of row and column to the value of turn
+        if(turn = X)
+        {
+            board[row][column] = 'O';
+        } 
+        else
+        {
+            board[row][column] = 'X';
+        }
+    }
     //1-B.  When turn has the value 'X', then...
     //1-B-1.  turn should be assigned the value 'O'
     //1-C.  In any other case, then...
@@ -52,6 +64,13 @@ int main()
     cout<<"\nBOARD\n-----\n";
     //TODO: Print the current board
     //Outline
+    for(int r=0;r<3;r++)
+    {
+        for(int c=0;c<3;c++)
+        {
+            cout<<board[r][c]<<" "<<endl;
+        }
+    }
     //1. Traverse through each row, calling the current row r
     //1-A. Traverse through each column in row r, calling the current column c
     //1-A-1.  Display the value of the board at location of r and c
